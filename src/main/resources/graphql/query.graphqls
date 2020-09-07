@@ -1,0 +1,4 @@
+# This is a lovely comment in the query file
+type Query {
+    bankAccount (id: ID): BankAccount
+}
