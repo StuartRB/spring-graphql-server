@@ -4,10 +4,10 @@ spring:
 
 graphql:
   servlet:
-    maxQueryDepth: 5
+    maxQueryDepth: 100
   playground:
     enabled: true
-    headers:
-      Authorization: Bearer abcd
-    settings:
-      editor.theme: light
+  settings:
+    editor.theme: dark
+voyager:
+  enabled: true

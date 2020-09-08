@@ -27,6 +27,7 @@ dependencies {
     }
     compile group: 'com.graphql-java-kickstart', name: 'playground-spring-boot-starter', version: '7.1.0'
     compile group: 'com.graphql-java-kickstart', name: 'graphql-spring-boot-starter', version: '7.1.0'
+    compile group: 'com.graphql-java-kickstart', name: 'voyager-spring-boot-starter', version: '7.1.0'
 
 }
 
