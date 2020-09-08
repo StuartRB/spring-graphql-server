@@ -17,15 +17,28 @@ public class BankAccountResolver implements GraphQLQueryResolver {
 
         log.info("Creating bank account with id {})", id);
 
+        // Recursion test
+
+        Client client1 = Client.builder()
+                .id(UUID.randomUUID())
+                .firstName("Stuart")
+                .middleNames(Collections.singletonList("The Beast"))
+                .lastName("Burnside")
+                .build();
+        Client client2 = Client.builder()
+                .id(UUID.randomUUID())
+                .firstName("Robert")
+                .middleNames(Collections.singletonList("Supergoose"))
+                .lastName("Mongoose")
+                .build();
+
+        client1.setClient(client2);
+        client2.setClient(client1);
+
         return BankAccount.builder()
                 .id(id)
                 .currency(Currency.USD)
-                .client(Client.builder()
-                        .id(UUID.randomUUID())
-                        .firstName("Stuart")
-                        .middleNames(Collections.singletonList("The Beast"))
-                        .lastName("Burnside")
-                        .build())
+                .client(client1)
                 .build();
     }
 }

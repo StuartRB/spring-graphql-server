@@ -4,9 +4,3 @@ type BankAccount {
     client: Client!
 }
 
-type Client {
-    id: ID!
-    firstName: String!
-    middleNames: [String!]
-    lastName: String!
-}
